@@ -6,7 +6,7 @@ const Color = ({ color, setSelectedColor }) => {
 
 const App = () => {
   const [selectedColor, setSelectedColor] = useState("");
-
+  console.log(selectedColor);
   <div id="navbar">
     <div> Currently selected: </div>
     <div className={selectedColor}>{selectedColor}</div>
@@ -15,7 +15,7 @@ const App = () => {
     <div id="container">
       <div id="navbar">
         <div>Currently selected: </div>
-        <div className="red">red</div>
+        <div className={selectedColor}>{selectedColor}</div>
       </div>
       <div id="colors-list">
         <Color color="green" setSelectedColor={setSelectedColor} />
